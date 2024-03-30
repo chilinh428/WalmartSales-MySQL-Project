@@ -1,3 +1,7 @@
+---------------------------
+----------GENERIC----------
+---------------------------
+
 -- 01. How many unique cities does the data have?
 SELECT 	ROW_NUMBER() OVER() AS row_num,
 		city
@@ -8,6 +12,10 @@ GROUP BY city;
 SELECT 	DISTINCT city,
 		branch
 FROM sales;
+
+---------------------------
+---------PRODUCTS----------
+---------------------------
 
 -- 03. How many unique product lines does the data have?
 SELECT 	ROW_NUMBER() OVER() AS productlines_num, 
@@ -101,6 +109,10 @@ SELECT	product_line,
 FROM sales
 GROUP BY product_line
 ORDER BY avg_rating DESC;
+
+---------------------------
+---------CUSTOMERS---------
+---------------------------
 
 -- 14. How many unique customer types does the data have?
 SELECT 	ROW_NUMBER() OVER() AS row_num, 
@@ -202,6 +214,10 @@ FROM (SELECT branch, day_name, ROUND(AVG(rating),2) AS avg_rating
 	GROUP BY day_name 
 	ORDER BY avg_rating DESC LIMIT 1) C
 ;
+
+---------------------------
+-----------SALES-----------
+---------------------------
 
 -- 24. Which of the customer types brings the most revenue?
 SELECT	customer_type,
