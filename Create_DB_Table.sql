@@ -3,7 +3,7 @@ CREATE DATABASE walmart_sales;
 USE walmart_sales;
 
 CREATE TABLE sales (
-	invoice_id VARCHAR(30) NOT NULL PRIMARY KEY,
+    invoice_id VARCHAR(30) NOT NULL PRIMARY KEY,
     branch VARCHAR(5) NOT NULL,
     city VARCHAR(30) NOT NULL,
     customer_type VARCHAR(30) NOT NULL,
@@ -20,14 +20,14 @@ CREATE TABLE sales (
     gross_margin_pct FLOAT,
     gross_income DECIMAL(12, 4),
     rating FLOAT
-    );
+);
 
 -- Add the time_of_day column
 ALTER TABLE sales ADD COLUMN time_of_day VARCHAR(20);
 
 UPDATE sales
 SET time_of_day = (
-	CASE
+    CASE
 		WHEN `time` BETWEEN "00:00:00" AND "12:00:00" THEN "Morning"
         WHEN `time` BETWEEN "12:01:00" AND "16:00:00" THEN "Afternoon"
         ELSE "Evening"
