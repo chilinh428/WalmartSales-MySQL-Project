@@ -13,7 +13,7 @@ The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition]
 | city                    | The location of the branch              | VARCHAR   |
 | customer_type           | The type of the customer                | VARCHAR   |
 | gender                  | Gender of the customer making purchase  | VARCHAR   |
-| product_line            | Product line of the product solf        | VARCHAR   |
+| product_line            | Product line of the product sold        | VARCHAR   |
 | unit_price              | The price of each product               | DECIMAL   |
 | quantity                | The amount of the product sold          | INT       |
 | VAT                     | The amount of tax on the purchase       | FLOAT     |
@@ -23,7 +23,7 @@ The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition]
 | payment_method          | The total amount paid                   | DECIMAL   |
 | cogs                    | Cost Of Goods sold                      | DECIMAL   |
 | gross_margin_percentage | Gross margin percentage                 | FLOAT     |
-| gross_income            | Gross Income                            | DECIMAL   |
+| gross_income            | Gross income                            | DECIMAL   |
 | rating                  | Rating                                  | FLOAT     |
 
 ### Analysis List
